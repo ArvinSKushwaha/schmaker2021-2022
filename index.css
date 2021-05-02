@@ -1,4 +1,31 @@
-#class-selector
-{
-    height: calc(100vh - 4rem);
+#class-selector {
+	height: calc(100vh - 4rem);
+    scrollbar-width: none;
+}
+
+input:checked ~ .dot {
+	transform: translateX(100%);
+}
+
+#class-selector::-webkit-scrollbar {
+	width: 0px;
+}
+
+header, #class-selector {
+	transition: all 0.5s ease-in-out;
+}
+
+header {
+	transform: translate(0, -100%);
+}
+
+header.show {
+	transform: translate(0, 0);
+}
+
+#class-selector {
+	transform: translate(-100%, 0);
+}
+#class-selector.show {
+	transform: translate(0, 0);
 }
