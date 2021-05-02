@@ -24,20 +24,6 @@ let sem1ResMeetData, sem2ResMeetData;
 const sem1Res = 'https://docs.google.com/spreadsheets/d/1yQx8Hj95IlI_vhlv_2lFZm2bL__8Zx1c85e-O_d821w/edit#gid=0';
 const sem2Res = 'https://docs.google.com/spreadsheets/d/1yQx8Hj95IlI_vhlv_2lFZm2bL__8Zx1c85e-O_d821w/edit#gid=501332295';
 
-sheetrock({
-    url: sem1Res,
-    callback: (error, options, response) => {
-        sem1ResMeetData = response;
-    }
-});
-
-sheetrock({
-    url: sem2Res,
-    callback: (error, options, response) => {
-        sem2ResMeetData = response;
-    }
-});
-
 fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
     .then(response => {
         if (response.ok) return response.json()
@@ -65,6 +51,20 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
         setOptions(classes);
         populateFields(classes);
     });
+
+sheetrock({
+    url: sem1Res,
+    callback: (error, options, response) => {
+        sem1ResMeetData = response;
+    }
+});
+
+sheetrock({
+    url: sem2Res,
+    callback: (error, options, response) => {
+        sem2ResMeetData = response;
+    }
+});
 
 function populateFields(classList) {
     fields = new Set([" - No Selection - "]);
