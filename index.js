@@ -11,7 +11,11 @@ class Class {
     }
 }
 
-const classes = [];
+let classes = [];
+let sem1Classes = [];
+let sem1ClassDiv = document.getElementById('sem1-class-list_');
+let sem2Classes = [];
+let sem2ClassDiv = document.getElementById('sem2-class-list_');
 
 const full = `\u{25CF}`, half = `\u{25D6}`;
 
@@ -103,11 +107,14 @@ schoolSetting.addEventListener("change", (ev) => {
 semSetting.addEventListener("change", (ev) => {
     if (semSetting.checked) {
         document.getElementById("semester-setting").innerHTML = "Semester 2";
+        sem1ClassDiv.parentElement.classList.remove("show");
+        sem2ClassDiv.parentElement.classList.add("show");
     }
     else {
         document.getElementById("semester-setting").innerHTML = "Semester 1";
+        sem1ClassDiv.parentElement.classList.add("show");
+        sem2ClassDiv.parentElement.classList.remove("show");
     }
-    setOptions(classes);
 });
 
 searchBar.addEventListener("input", (ev) => {
@@ -138,6 +145,7 @@ function setOptions(classList) {
     });
     classList.forEach(element => {
         let node = document.createElement('div');
+        node.classList.add('class-block');
         node.classList.add('text-center');
         node.classList.add('p-2');
         node.classList.add('w-full');
@@ -145,9 +153,18 @@ function setOptions(classList) {
         let rating = Math.round(element.class_rating * 2);
         node.title = `Rating: ${full.repeat(Math.floor(rating / 2)) + half.repeat(rating % 2)} (${element.class_rating.toPrecision(2)})\n${element.class_summary}`;
         node.setAttribute("data-toggle", "tooltip");
-        classOptions.appendChild(document.createElement('hr'));
-        classOptions.appendChild(node);
-        classOptions.appendChild(document.createElement('hr'));
+        let wrapNode = document.createElement('div');
+        wrapNode.append(document.createElement('hr'), node, document.createElement('hr'));
+        classOptions.append(wrapNode);
+        node.addEventListener('click', (ev) => {
+            if (semSetting.checked) {
+                sem2Classes.push(element);
+            }
+            else {
+                sem1Classes.push(element);
+            }
+            updateSemesterClasses();
+        });
     });
 }
 
@@ -156,3 +173,46 @@ window.onload = () => {
     setTimeout(() => { document.getElementById("class-selector").classList.add("hide"); }, 800);
     setOptions(classes);
 };
+
+function updateSemesterClasses() {
+    sem1ClassDiv.innerHTML = "";
+    sem2ClassDiv.innerHTML = "";
+
+    sem1Classes.forEach(element => {
+        let node = document.createElement('div');
+        node.classList.add('class-block');
+        node.classList.add('text-center');
+        node.classList.add('p-2');
+        node.classList.add('w-full');
+        node.innerHTML = `<b>${element.class_code}</b> ${element.class_name}`;
+        let rating = Math.round(element.class_rating * 2);
+        node.title = `Rating: ${full.repeat(Math.floor(rating / 2)) + half.repeat(rating % 2)} (${element.class_rating.toPrecision(2)})\n${element.class_summary}`;
+        node.setAttribute("data-toggle", "tooltip");
+        let wrapNode = document.createElement('div');
+        wrapNode.append(document.createElement('hr'), node, document.createElement('hr'));
+        sem1ClassDiv.append(wrapNode);
+        node.addEventListener('click', (ev) => {
+            sem1Classes.splice(Array.prototype.indexOf.call(sem1ClassDiv.children, node.parentElement), 1);
+            updateSemesterClasses();
+        });
+    });
+
+    sem2Classes.forEach(element => {
+        let node = document.createElement('div');
+        node.classList.add('class-block');
+        node.classList.add('text-center');
+        node.classList.add('p-2');
+        node.classList.add('w-full');
+        node.innerHTML = `<b>${element.class_code}</b> ${element.class_name}`;
+        let rating = Math.round(element.class_rating * 2);
+        node.title = `Rating: ${full.repeat(Math.floor(rating / 2)) + half.repeat(rating % 2)} (${element.class_rating.toPrecision(2)})\n${element.class_summary}`;
+        node.setAttribute("data-toggle", "tooltip");
+        let wrapNode = document.createElement('div');
+        wrapNode.append(document.createElement('hr'), node, document.createElement('hr'));
+        sem2ClassDiv.append(wrapNode);
+        node.addEventListener('click', (ev) => {
+            sem2Classes.splice(Array.prototype.indexOf.call(sem2ClassDiv.children, node.parentElement), 1);
+            updateSemesterClasses();
+        });
+    });
+}

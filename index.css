@@ -3,6 +3,27 @@
 	scrollbar-width: none;
 }
 
+#sem1-class-list, #sem2-class-list {
+	height: calc(100vh - 4rem);
+	transition: 0.5s all;
+}
+
+#sem1-class-list{
+	transform: translateX(-100%);
+}
+
+#sem1-class-list.show {
+	transform: translateX(0);
+}
+
+#sem2-class-list {
+	transform: translateX(100%);
+}
+
+#sem2-class-list.show {
+	transform: translateX(0);
+}
+
 input:checked ~ .dot {
 	transform: translateX(100%);
 }
