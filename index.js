@@ -6,6 +6,8 @@ class Class {
         this.class_summary = null;
         this.field = null;
         this.offered = null;
+        this.sem1ResMeet = [];
+        this.sem2ResMeet = [];
     }
 }
 
@@ -24,12 +26,28 @@ let sem1ResMeetData, sem2ResMeetData;
 const sem1Res = 'https://docs.google.com/spreadsheets/d/1yQx8Hj95IlI_vhlv_2lFZm2bL__8Zx1c85e-O_d821w/edit#gid=0';
 const sem2Res = 'https://docs.google.com/spreadsheets/d/1yQx8Hj95IlI_vhlv_2lFZm2bL__8Zx1c85e-O_d821w/edit#gid=501332295';
 
+sheetrock({
+    url: sem1Res,
+    callback: (error, options, response) => {
+        sem1ResMeetData = response;
+    }
+});
+
+sheetrock({
+    url: sem2Res,
+    callback: (error, options, response) => {
+        sem2ResMeetData = response;
+    }
+});
+
 fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
     .then(response => {
         if (response.ok) return response.json()
         throw new Error('Network response was not ok.')
     })
     .then(data => {
+        document.getElementById('loading-panel').classList.add('opacity-0');
+        setTimeout(() => { document.getElementById('loading-panel').hidden = true; }, 1000);
         let doc = document.createElement('html');
         doc.innerHTML = data.contents;
         let clss = doc.getElementsByClassName("results_list");
@@ -46,25 +64,14 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
             cls.class_summary = class_summary;
             cls.field = field.replaceAll("_", " ");
             cls.offered = offered;
+            if (cls.offered.includes('schl_1')) {
+                
+            }
             classes.push(cls);
         }
         setOptions(classes);
         populateFields(classes);
     });
-
-sheetrock({
-    url: sem1Res,
-    callback: (error, options, response) => {
-        sem1ResMeetData = response;
-    }
-});
-
-sheetrock({
-    url: sem2Res,
-    callback: (error, options, response) => {
-        sem2ResMeetData = response;
-    }
-});
 
 function populateFields(classList) {
     fields = new Set([" - No Selection - "]);

@@ -1,6 +1,6 @@
 #class-selector {
 	height: calc(100vh - 4rem);
-    scrollbar-width: none;
+	scrollbar-width: none;
 }
 
 input:checked ~ .dot {
@@ -11,7 +11,8 @@ input:checked ~ .dot {
 	width: 0px;
 }
 
-header, #class-selector {
+header,
+#class-selector {
 	transition: all 0.5s ease-in-out;
 }
 
@@ -28,4 +29,22 @@ header.show {
 }
 #class-selector.show {
 	transform: translate(0, 0);
+}
+
+#loading-panel, #bg-panel, #loading-spinner {
+	transition: opacity 1s;
+}
+
+#loading-spinner:before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: calc(50% - 4.5rem);
+	left: calc(50% - 4.5rem);
+	width: 9rem;
+	height: 9rem;
+	border-radius: 50%;
+	border: 5px solid #ccc;
+	border-top-color: #000;
+	animation: spin 2s linear infinite;
 }
