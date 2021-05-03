@@ -23,10 +23,15 @@
     <header class="w-full absolute h-16 flex justify-center items-center text-xl sm:text-2xl bg-gray-100 show">
         <span>Schmaker
             2021-2022</span>
+        <div id="title-bar" class="absolute right-3 sm:hidden">
+            <div id="l1" class="w-5 border-2 border-gray-900 m-1 active"></div>
+            <div id="l2" class="w-5 border-2 border-gray-900 m-1 active"></div>
+            <div id="l3" class="w-5 border-2 border-gray-900 m-1 active"></div>
+        </div>
     </header>
 
     <div id="sem1-class-list"
-        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/4 lg:left-1/4 xl:w-5/6 xl:left-1/6 border-l-2 border-gray-200 bg-white top-16 show">
+        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/8 lg:left-1/4 xl:w-5/12 xl:left-1/6 border-l-2 border-gray-200 bg-white top-16 show">
         <div class="w-full text-center p-2 font-bold">Semester 1</div>
         <hr class="border-black border-1">
         <div id="sem1-class-list_" class="overflow-y-scroll h-full">
@@ -35,7 +40,7 @@
     </div>
 
     <div id="sem2-class-list"
-        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/4 lg:left-1/4 xl:w-5/6 xl:left-1/6 border-l-2 border-gray-200 bg-white top-16">
+        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/8 lg:left-5/8 xl:w-5/12 xl:left-7/12 border-l-2 border-gray-200 bg-white top-16">
         <div class="w-full text-center p-2 font-bold">Semester 2</div>
         <hr class="border-black border-1">
         <div id="sem2-class-list_" class="overflow-y-scroll h-full">
@@ -44,11 +49,11 @@
     </div>
 
     <div id="class-selector"
-        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 bg-white fixed top-16 overflow-y-scroll show">
+        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 bg-white fixed top-16 overflow-y-scroll show border-r-2 border-gray-200">
         <div class="w-full text-center p-2 font-bold">Course Selector</div>
         <hr class="border-black border-1">
         <div class="class-filters flex justify-center flex-col max-w-full overflow-x-hidden">
-            <div class="flex items-center justify-center w-full mt-3">
+            <div class="flex items-center justify-center w-full mt-3 lg:hidden">
 
                 <label for="set-semester" class="flex items-center cursor-pointer">
                     <div class="relative">
