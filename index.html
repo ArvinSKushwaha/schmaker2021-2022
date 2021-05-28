@@ -31,29 +31,43 @@
     </header>
 
     <div id="sem1-class-list"
-        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/8 lg:left-1/4 xl:w-5/12 xl:left-1/6 border-l-2 border-gray-200 bg-white top-16 show">
-        <div class="w-full text-center p-2 font-bold">Semester 1</div>
+        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/4 lg:left-1/4 sm:border-l-2 border-gray-200 bg-white top-16 show">
+        <div class="w-full text-center p-2 font-bold bg-yellow-200 header sem1 h-10">Semester 1</div>
         <hr class="border-black border-1">
-        <div id="sem1-class-list_" class="overflow-y-scroll h-full">
+        <div id="sem1-class-list_" class="overflow-y-scroll">
             <!-- DOM Operations -->
+        </div>
+    </div>
+
+    <div id="schedule-possibilities1" class="possibilities fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/4 lg:left-1/4 sm:border-l-2 border-gray-200 bg-green-200 top-16 show text-center">
+        <div class="scheduleTag w-full">Schedules</div>
+        <div id="calendarSem1" class="calendar">
+            <!-- DOM Operations?? -->
         </div>
     </div>
 
     <div id="sem2-class-list"
-        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/8 lg:left-5/8 xl:w-5/12 xl:left-7/12 border-l-2 border-gray-200 bg-white top-16">
-        <div class="w-full text-center p-2 font-bold">Semester 2</div>
+        class="fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/4 lg:left-1/4 sm:border-l-2 border-gray-200 bg-white top-16">
+        <div class="w-full text-center p-2 font-bold bg-yellow-200 header sem2 h-10">Semester 2</div>
         <hr class="border-black border-1">
-        <div id="sem2-class-list_" class="overflow-y-scroll h-full">
+        <div id="sem2-class-list_" class="overflow-y-scroll">
             <!-- DOM Operations -->
         </div>
     </div>
 
+    <div id="schedule-possibilities2" class="possibilities fixed w-full sm:w-1/2 sm:left-1/2 md:w-2/3 md:left-1/3 lg:w-3/4 lg:left-1/4 sm:border-l-2 border-gray-200 bg-green-200 top-16 text-center">
+        <div class="scheduleTag w-full">Schedules</div>
+        <div id="calendarSem2" class="calendar">
+            <!-- DOM Operations?? -->
+        </div>
+    </div>
+
     <div id="class-selector"
-        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 bg-white fixed top-16 overflow-y-scroll show border-r-2 border-gray-200">
-        <div class="w-full text-center p-2 font-bold">Course Selector</div>
+        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white fixed top-16 overflow-y-scroll show border-r-2 border-gray-200">
+        <div class="w-full text-center p-2 font-bold h-10">Course Selector</div>
         <hr class="border-black border-1">
         <div class="class-filters flex justify-center flex-col max-w-full overflow-x-hidden">
-            <div class="flex items-center justify-center w-full mt-3 lg:hidden">
+            <div class="flex items-center justify-center w-full mt-3">
 
                 <label for="set-semester" class="flex items-center cursor-pointer">
                     <div class="relative">

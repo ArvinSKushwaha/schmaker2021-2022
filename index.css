@@ -5,26 +5,28 @@
 
 #sem1-class-list,
 #sem2-class-list {
-	height: calc(100vh - 4rem);
+	height: calc(100vh - 5.5rem);
 	transition: 0.5s all;
 }
 
-@media (max-width: 1024px) {
-	#sem1-class-list {
-		transform: translateX(-100%);
-	}
+#sem1-class-list {
+	transform: translateX(-100%);
+}
 
-	#sem1-class-list.show {
-		transform: translateX(0);
-	}
+#sem1-class-list.show {
+	transform: translateX(0);
+}
 
-	#sem2-class-list {
-		transform: translateX(100%);
-	}
+#sem2-class-list {
+	transform: translateX(100%);
+}
 
-	#sem2-class-list.show {
-		transform: translateX(0);
-	}
+#sem2-class-list.show {
+	transform: translateX(0);
+}
+
+#sem1-class-list_, #sem2-class-list_ {
+	height: calc(100vh - 8rem);
 }
 
 input:checked ~ .dot {
@@ -46,6 +48,27 @@ header {
 
 header.show {
 	transform: translate(0, 0);
+}
+
+.possibilities {
+	top: 100vh;
+	transition: all 0.5s;
+}
+
+#schedule-possibilities1 {
+	transform: translate(-100%, -1.5rem);
+}
+
+#schedule-possibilities1.show {
+	transform: translate(0, -1.5rem);
+}
+
+#schedule-possibilities2 {
+	transform: translate(100%, -1.5rem);
+}
+
+#schedule-possibilities2.show {
+	transform: translate(0, -1.5rem);
 }
 
 #class-selector {
@@ -111,4 +134,19 @@ header.show {
 
 #l3.active {
 	transform: translateY(-0.5rem) rotate(45deg);
+}
+
+.calendar {
+	height: calc(100vh - 1.5rem);
+	background: white;
+}
+
+.possibilities.active {
+	top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+	.possibilities.active {
+		top: 8rem;
+	}
 }
