@@ -142,11 +142,5 @@ header.show {
 }
 
 .possibilities.active {
-	top: 1.5rem;
-}
-
-@media (min-width: 640px) {
-	.possibilities.active {
-		top: 8rem;
-	}
+	top: calc(8rem + 1px);
 }

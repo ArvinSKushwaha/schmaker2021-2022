@@ -1,3 +1,6 @@
+const tableText = `<link rel="stylesheet" href="table.css"><table border="0" cellpadding="0" cellspacing="0" width="2425" style="border-collapse:collapse;table-layout:fixed;width:1825pt"><colgroup><col width="33" style="mso-width-source:userset;mso-width-alt:1206;width:25pt"><col width="55" style="mso-width-source:userset;mso-width-alt:2011;width:41pt"><col width="117" style="mso-width-source:userset;mso-width-alt:4278;width:88pt"><col width="33" style="mso-width-source:userset;mso-width-alt:1206;width:25pt"><col width="57" style="mso-width-source:userset;mso-width-alt:2084;width:43pt"><col width="117" style="mso-width-source:userset;mso-width-alt:4278;width:88pt"><col width="33" style="mso-width-source:userset;mso-width-alt:1206;width:25pt"><col width="57" style="mso-width-source:userset;mso-width-alt:2084;width:43pt"><col width="117" style="mso-width-source:userset;mso-width-alt:4278;width:88pt"><col width="33" style="mso-width-source:userset;mso-width-alt:1206;width:25pt"><col width="57" style="mso-width-source:userset;mso-width-alt:2084;width:43pt"><col width="117" style="mso-width-source:userset;mso-width-alt:4278;width:88pt"><col width="33" style="mso-width-source:userset;mso-width-alt:1206;width:25pt"><col width="57" style="mso-width-source:userset;mso-width-alt:2084;width:43pt"><col width="117" style="mso-width-source:userset;mso-width-alt:4278;width:88pt"><col width="61" style="mso-width-source:userset;mso-width-alt:2230;width:46pt"><col width="121" span="11" style="mso-width-source:userset;mso-width-alt:4425;width:91pt"></colgroup><tbody><tr height="48" style="mso-height-source:userset;height:36.0pt"><td colspan="15" height="48" class="xl73" width="1033" style="border-right:1.0pt solid black;height:36.0pt;width:778pt">NCSSM Weekly Timetable<span style="mso-spacerun:yes">&nbsp;&nbsp;</span></td><td class="xl65" width="61" style="width:46pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td><td class="xl65" width="121" style="width:91pt"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="3" height="35" class="xl75" style="border-right:1.0pt solid black;height:26.25pt">MONDAY</td><td colspan="3" class="xl75" style="border-right:1.0pt solid black;border-left:none">TUESDAY</td><td colspan="3" class="xl75" style="border-right:1.0pt solid black;border-left:none">WEDNESDAY</td><td colspan="3" class="xl75" style="border-right:1.0pt solid black;border-left:none">THURSDAY</td><td colspan="3" class="xl75" style="border-right:1.0pt solid black;border-left:none">FRIDAY</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" height="35" class="xl71" style="border-right:1.0pt solid black;height:26.25pt">TIME</td><td class="xl66" style="border-top:none;border-left:none">&nbsp;</td><td colspan="2" class="xl71" style="border-right:1.0pt solid black;border-left:none">TIME</td><td class="xl66" style="border-top:none;border-left:none">&nbsp;</td><td colspan="2" class="xl71" style="border-right:1.0pt solid black;border-left:none">TIME</td><td class="xl66" style="border-top:none;border-left:none">&nbsp;</td><td colspan="2" class="xl71" style="border-right:1.0pt solid black;border-left:none">TIME</td><td class="xl66" style="border-top:none;border-left:none">&nbsp;</td><td colspan="2" class="xl71" style="border-right:1.0pt solid black;border-left:none">TIME</td><td class="xl66" style="border-top:none;border-left:none">&nbsp;</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">8:30to 9:20</td><td rowspan="2" class="xl81" style="border-bottom:1.0pt solid black;border-top:none">{{A1}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:30 to 9:20</td><td rowspan="2" class="xl80" style="border-bottom:1.0pt solid black;border-top:none">{{D2}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:30 to 9:20</td><td rowspan="2" class="xl81" style="border-bottom:1.0pt solid black;border-top:none">{{A3}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:30 to 9:20</td><td rowspan="2" class="xl82" style="border-bottom:1.0pt solid black;border-top:none">{{C4}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:30 to 9:20</td><td rowspan="2" class="xl76" style="border-bottom:1.0pt solid black;border-top:none">{{B5}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">9:25to 10:15</td><td rowspan="2" class="xl76" style="border-bottom:1.0pt solid black;border-top:none">{{B1}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">9:25 to 10:15</td><td rowspan="2" class="xl76" style="border-bottom:1.0pt solid black;border-top:none">{{B2}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">9:25 to 10:15</td><td rowspan="2" class="xl80" style="border-bottom:1.0pt solid black;border-top:none">{{D3}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">9:25 to 10:15</td><td rowspan="2" class="xl81" style="border-bottom:1.0pt solid black;border-top:none">{{A4}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">9:25 to 10:15</td><td rowspan="2" class="xl82" style="border-bottom:1.0pt solid black;border-top:none">{{C5}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">10:20to 11:10</td><td rowspan="2" class="xl82" style="border-bottom:1.0pt solid black;border-top:none">{{C1}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">10:20 to 11:10</td><td rowspan="2" class="xl81" style="border-bottom:1.0pt solid black;border-top:none">{{A2}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">10:20 to 11:10</td><td rowspan="2" class="xl82" style="border-bottom:1.0pt solid black;border-top:none">{{C3}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">10:20 to 11:10</td><td rowspan="2" class="xl76" style="border-bottom:1.0pt solid black;border-top:none">{{B4}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">10:20 to 11:10</td><td rowspan="2" class="xl80" style="border-bottom:1.0pt solid black;border-top:none">{{D5}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">11:15to 12:05</td><td rowspan="2" class="xl80" style="border-bottom:1.0pt solid black;border-top:none">{{D1}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:10 to 11:50</td><td rowspan="2" class="xl81" style="border-bottom:1.0pt solid black;border-top:none">{{A2L}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:10 to 11:50</td><td rowspan="2" class="xl82" style="border-bottom:1.0pt solid black;border-top:none">{{C3L}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:10 to 11:50</td><td rowspan="2" class="xl76" style="border-bottom:1.0pt solid black;border-top:none">{{B4L}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:10 to 11:50</td><td rowspan="2" class="xl80" style="border-bottom:1.0pt solid black;border-top:none">{{D5L}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">12:05to 12:55</td><td rowspan="2" class="xl90" style="border-bottom:1.0pt solid black;border-top:none">LUNCH</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:50 to 12:40</td><td rowspan="2" class="xl90" style="border-bottom:1.0pt solid black;border-top:none">LUNCH</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:50 to 12:40</td><td rowspan="2" class="xl90" style="border-bottom:1.0pt solid black;border-top:none">LUNCH</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:50 to 12:40</td><td rowspan="2" class="xl90" style="border-bottom:1.0pt solid black;border-top:none">LUNCH</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">11:50 to 12:40</td><td rowspan="2" class="xl90" style="border-bottom:1.0pt solid black;border-top:none">LUNCH</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">12:55to 1:45</td><td rowspan="2" class="xl85" style="border-bottom:1.0pt solid black;border-top:none">{{E1}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">12:40 to 1:20</td><td rowspan="2" class="xl85" style="border-bottom:1.0pt solid black;border-top:none">{{E2L}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">12:40 to 1:20</td><td rowspan="2" class="xl84" style="border-bottom:1.0pt solid black;border-top:none">{{G3L}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">12:40 to 1:20</td><td rowspan="2" class="xl92" style="border-bottom:1.0pt solid black;border-top:none">{{F4L}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">12:40 to 1:20</td><td rowspan="2" class="xl84" style="border-bottom:1.0pt solid black;border-top:none">{{G5L}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">1:50to 2:40</td><td rowspan="2" class="xl92" style="border-bottom:1.0pt solid black;border-top:none">{{F1}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">1:20 to 2:10</td><td rowspan="2" class="xl85" style="border-bottom:1.0pt solid black;border-top:none">{{E2}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">1:20 to 2:10</td><td rowspan="2" class="xl93" style="border-bottom:1.0pt solid black">{{G3}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">1:20 to 2:10</td><td rowspan="2" class="xl92" style="border-bottom:1.0pt solid black;border-top:none">{{F4}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">1:20 to 2:10</td><td rowspan="2" class="xl93" style="border-bottom:1.0pt solid black">{{G5}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">2:45to 3:35</td><td rowspan="2" class="xl84" style="border-bottom:1.0pt solid black;border-top:none">{{G1}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">2:10 to 4:00</td><td rowspan="4" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">Flexible Use Time</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">2:15 to 3:05</td><td rowspan="2" class="xl106" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{F3}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">2:10 to 4:00</td><td rowspan="4" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">Flexible Use Time</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">2:15 to 3:05</td><td rowspan="2" class="xl112" style="border-bottom:1.0pt solid black">{{F5}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="2" height="70" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:52.5pt;width:66pt">3:35to 4:25</td><td rowspan="2" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">Meeting</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">3:10 to 4:00</td><td rowspan="2" class="xl105" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{E3}}</td><td colspan="2" rowspan="2" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">3:10 to 4:00</td><td rowspan="2" class="xl85" style="border-bottom:1.0pt solid black;border-top:none">{{E5}}</td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl65" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="23" style="mso-height-source:userset;height:17.25pt"><td colspan="15" height="23" class="xl113" style="border-right:1.0pt solid black;height:17.25pt">&nbsp;</td><td class="xl67"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="3" height="35" class="xl108" width="205" style="border-right:1.0pt solid black;height:26.25pt;width:154pt">MONDAY</td><td colspan="3" class="xl107" width="207" style="width:156pt">TUESDAY</td><td colspan="3" class="xl108" width="207" style="width:156pt">WEDNESDAY</td><td colspan="3" class="xl108" width="207" style="border-right:1.0pt solid black;width:156pt">THURSDAY</td><td colspan="3" rowspan="9" class="xl111" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black">Evening</td><td class="xl67"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="4" height="140" class="xl109" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:105.0pt;width:66pt">6:15pmto 7:55pm</td><td rowspan="4" class="xl110" width="117" style="border-bottom:1.0pt solid black;width:88pt">{{H1}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">6:15pm to 7:55pm</td><td rowspan="4" class="xl96" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{H2}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">6:15pm to 7:55pm</td><td rowspan="4" class="xl96" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{H3}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">6:15pm to 7:55pm</td><td rowspan="4" class="xl96" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{H4}}</td><td class="xl67"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td colspan="2" rowspan="4" height="140" class="xl86" width="88" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:105.0pt;width:66pt">8:05pmto 9:45pm</td><td rowspan="4" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{I1}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:05pm to 9:45pm</td><td rowspan="4" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{I2}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:05pm to 9:45pm</td><td rowspan="4" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{I3}}</td><td colspan="2" rowspan="4" class="xl86" width="90" style="border-right:1.0pt solid black;border-bottom:1.0pt solid black;width:68pt">8:05pm to 9:45pm</td><td rowspan="4" class="xl88" width="117" style="border-bottom:1.0pt solid black;border-top:none;width:88pt">{{I4}}</td><td class="xl67"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr><tr height="35" style="mso-height-source:userset;height:26.25pt"><td height="35" class="xl67" style="height:26.25pt"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td><td class="xl65"></td></tr></tbody></table>`;
+
+
 function toggleFullScreen() {
     var doc = window.document;
     var docEl = doc.documentElement;
@@ -28,9 +31,6 @@ let isEqual = (a, b) => {
     return false;
 }
 
-// if (window.mobileCheck()) {
-//     toggleFullScreen();
-// }
 class Class {
     constructor(class_name, class_code) {
         this.class_code = class_code;
@@ -48,6 +48,7 @@ let classes = [];
 let sem1Classes = [];
 const sem1ClassDiv = document.getElementById('sem1-class-list_');
 let sem2Classes = [];
+let sem1Validity, sem2Validity;
 const sem2ClassDiv = document.getElementById('sem2-class-list_');
 const scheduleSem1 = document.getElementById('schedule-possibilities1');
 const scheduleSem2 = document.getElementById('schedule-possibilities2');
@@ -65,8 +66,54 @@ const menu = document.getElementById("title-bar");
 const url = 'https://uniapp.ncssm.edu/registrar/catalog/course_catalog_beta1.3.1.php';
 
 let sem1ResMeetData, sem2ResMeetData;
-const sem1Res = 'https://docs.google.com/spreadsheets/d/1yQx8Hj95IlI_vhlv_2lFZm2bL__8Zx1c85e-O_d821w/edit#gid=0';
-const sem2Res = 'https://docs.google.com/spreadsheets/d/1yQx8Hj95IlI_vhlv_2lFZm2bL__8Zx1c85e-O_d821w/edit#gid=501332295';
+const sem1Res = 'https://docs.google.com/spreadsheets/d/1UDDykgtiBTb3f5saTyFb8q3fL1sWuDLgwJEkZJ6ym6o/edit#gid=0';
+const sem2Res = 'https://docs.google.com/spreadsheets/d/1UDDykgtiBTb3f5saTyFb8q3fL1sWuDLgwJEkZJ6ym6o/edit#gid=934085507';
+
+const schedule = {
+    A1: null,
+    A2: null,
+    A3: null,
+    A4: null,
+    B1: null,
+    B2: null,
+    B4: null,
+    B5: null,
+    C1: null,
+    C3: null,
+    C4: null,
+    C5: null,
+    D1: null,
+    D2: null,
+    D3: null,
+    D5: null,
+    A2L: null,
+    C3L: null,
+    B4L: null,
+    D5L: null,
+    E1: null,
+    E2: null,
+    E3: null,
+    E5: null,
+    F1: null,
+    F3: null,
+    F4: null,
+    F5: null,
+    G1: null,
+    G3: null,
+    G5: null,
+    E2L: null,
+    G3L: null,
+    F4L: null,
+    G5L: null,
+    H1: null,
+    H2: null,
+    H3: null,
+    H4: null,
+    I1: null,
+    I2: null,
+    I3: null,
+    I4: null
+}
 
 sheetrock({
     url: sem1Res,
@@ -83,6 +130,8 @@ sheetrock({
         checkBoth();
     }
 });
+
+let uniq = a => [...new Set(a)];
 
 let count = 0;
 function checkBoth() {
@@ -104,7 +153,6 @@ function performFetch() {
             let doc = document.createElement('html');
             doc.innerHTML = data.contents;
             let clss = doc.getElementsByClassName("results_list");
-            console.log(clss);
             for (let index = 0; index < clss.length; index++) {
                 let cls = clss[index];
                 let clsname = cls.innerText;
@@ -145,7 +193,7 @@ function performFetch() {
                 relRows = relRows.map(value => {
                     return value.cellsArray[2];
                 });
-                cls.sem1ResMeet = relRows;
+                cls.sem1ResMeet = uniq(relRows);
 
                 relRows = sem2ResMeetData.filter(value => {
                     let match = value.cellsArray[0].includes(code);
@@ -159,7 +207,7 @@ function performFetch() {
                 relRows = relRows.map(value => {
                     return value.cellsArray[2];
                 });
-                cls.sem2ResMeet = relRows;
+                cls.sem2ResMeet = uniq(relRows);
             }
             setOptions(classes);
             populateFields(classes);
@@ -357,6 +405,47 @@ function updateSemesterClasses() {
             updateSemesterClasses();
         });
     });
+
+    sem1Validity = checkValidity(sem1Classes, 1);
+    sem2Validity = checkValidity(sem2Classes, 2);
+
+    if (sem1Validity.classConflicts.size > 0)
+    {
+        sem1Validity.classConflicts.forEach((v) => {
+            c = v.split(" ");
+            c = [parseInt(c[0]), parseInt(c[1])];
+            sem1ClassDiv.children[c[0]].classList.add("bg-red-400");
+            sem1ClassDiv.children[c[1]].classList.add("bg-red-400");
+        })
+    }
+    
+    if (sem2Validity.classConflicts.size > 0)
+    {
+        sem2Validity.classConflicts.forEach((v) => {
+            c = v.split(" ");
+            c = [parseInt(c[0]), parseInt(c[1])];
+            sem2ClassDiv.children[c[0]].classList.add("bg-red-400");
+            sem2ClassDiv.children[c[1]].classList.add("bg-red-400");
+        })
+    }
+
+    if (sem1Validity.success) {
+        document.querySelector(".sem1.header").classList.remove("bg-yellow-200", "bg-red-200");
+        document.querySelector(".sem1.header").classList.add("bg-green-200");
+    }
+    else {
+        document.querySelector(".sem1.header").classList.remove("bg-yellow-200", "bg-green-200");
+        document.querySelector(".sem1.header").classList.add("bg-red-200");
+    }
+
+    if (sem2Validity.success) {
+        document.querySelector(".sem2.header").classList.remove("bg-yellow-200", "bg-red-200");
+        document.querySelector(".sem2.header").classList.add("bg-green-200");
+    }
+    else {
+        document.querySelector(".sem2.header").classList.remove("bg-yellow-200", "bg-green-200");
+        document.querySelector(".sem2.header").classList.add("bg-red-200");
+    }
 }
 
 menu.addEventListener('click', (ev) => {
@@ -366,8 +455,71 @@ menu.addEventListener('click', (ev) => {
     classSelector.classList.toggle('show');
 });
 
-sem1ClassDiv.addEventListener('change', (ev) => {
-    calculateValidity(sem1Classes, sem1ResMeet)
-});
+// Input: str[][] (eg., [['A12L3', 'C13L5'], ['G13L5', 'F134L5']])
+function generatePermutations(meetings) {
+    meetings = meetings.map(a => a.map(b => [b]));
+    if (meetings.length === 0) return;
+    if (meetings.length == 1) return meetings[0];
+    let comb = (a, b) => {
+        let combos = [];
+        a.forEach((c) => {
+            b.forEach((d) => {
+                combos.push(c.concat(d));
+            })
+        })
+        return combos;
+    };
+    let prep = comb(meetings[0], meetings[1]);
+    for (let index = 2; index < meetings.length; index++) {
+        prep = comb(prep, meetings[index]);
+    }
+    return prep;
+}
+
+function decomp(meeting) {
+    if (meeting[0] == "M") return [];
+    let blockLetter;
+    let blocks = [];
+
+    [...meeting].forEach((val, index) => {
+        if (isNaN(val) && val != "L") blockLetter = val;
+        else {
+            if (val == "L") blocks.push(blockLetter + meeting[index - 1] + "L");
+            else blocks.push(blockLetter + val);
+        }
+    });
+    return blocks;
+}
+
+function checkValidity(classList, sem) {
+    if (classList.length === 0) return {success: false, classConflicts: [], schedules: []};
+    let scheds = [];
+    let conflicts = [];
+    generatePermutations(classList.map((v) => { return v[`sem${sem}ResMeet`]; })).forEach((v) => {
+        let blocks = v.map(decomp);
+        let sched = {...schedule};
+
+        let success = true;
+        let conflict = new Set();
+
+        blocks.forEach((v_, idx) => {
+            v_.forEach((v__) => {
+                if(sched[v__] === null) sched[v__] = idx;
+                else {
+                    success = false;
+                    conflict.add(`${sched[v__]} ${idx}`);
+                }
+            })
+        })
+
+        if (success) scheds.push(sched);
+        conflicts.push(conflict);
+    });
+    return {
+        success: scheds.length > 0, 
+        classConflicts: scheds.length == 0 ? conflicts.reduce((a, b) => a.size < b.size ? a : b) : new Set(), 
+        schedules: scheds
+    };
+}
 
 // TODO: Incorporate Reviews (https://docs.google.com/spreadsheets/d/1vl9yanT3pBKm7gjQ9vg2buQ-ODigVwK9KOueupdrmHE/edit?fbclid=IwAR14ClyitziJAH7NLtS2XbiTnnDRnIplGOJQF_YL0HTulFYr9ovgkZWbUog#gid=1484999672)
