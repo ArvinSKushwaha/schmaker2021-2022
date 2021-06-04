@@ -58,7 +58,6 @@ const full = `\u{25CF}`, half = `\u{25D6}`;
 
 const classSelector = document.getElementById('class-selector');
 const classOptions = document.getElementById("class-options");
-const schoolSetting = document.getElementById("set-school");
 const semSetting = document.getElementById("set-semester");
 const searchBar = document.getElementById("class-searchbox");
 const fieldOptions = document.getElementById("field-select");
@@ -172,7 +171,7 @@ function performFetch() {
                 cls.offered = offered;
                 match_ = false;
                 for (const cls_ of classes) {
-                    if (isEqual(cls_.class_code, cls.class_code)) {
+                    if (isEqual(cls_.class_code, cls.class_code) && cls_.class_name === cls.class_name) {
                         match_ = true;
                         break
                     }
@@ -188,8 +187,9 @@ function performFetch() {
                             match |= value.cellsArray[0].includes(val);
                         });
                     }
-                    return match;
+                    return match && cls.offered.includes("schl_1");
                 });
+
                 relRows = relRows.map(value => {
                     return value.cellsArray[2];
                 });
@@ -202,7 +202,7 @@ function performFetch() {
                             match |= value.cellsArray[0].includes(val);
                         });
                     }
-                    return match;
+                    return match  && cls.offered.includes("schl_1");
                 });
                 relRows = relRows.map(value => {
                     return value.cellsArray[2];
@@ -228,15 +228,6 @@ function populateFields(classList) {
 }
 
 fieldOptions.addEventListener("change", (ev) => {
-    setOptions(classes);
-});
-
-schoolSetting.addEventListener("change", (ev) => {
-    if (schoolSetting.checked) {
-        document.getElementById("school-setting").innerHTML = "Online";
-    } else {
-        document.getElementById("school-setting").innerHTML = "Residential";
-    }
     setOptions(classes);
 });
 
@@ -287,13 +278,6 @@ function setOptions(classList) {
         }
         return value.class_code.toLowerCase().includes(lower) || value.class_name.toLowerCase().includes(lower);
     })
-    classList = classList.filter(value => {
-        if (schoolSetting.checked) {
-            return value.offered.includes("schl_2");
-        } else {
-            return value.offered.includes("schl_1");
-        }
-    });
 
     if (semSetting.checked) {
         classList = classList.filter(value => {
