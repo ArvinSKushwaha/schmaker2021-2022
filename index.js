@@ -526,26 +526,11 @@ function setOptions(classList) {
         let wrapNode = document.createElement('div');
         wrapNode.append(document.createElement('hr'), node, document.createElement('hr'));
         classOptions.append(wrapNode);
-        
-        // Array that will hold the current stored classes
-        let classStorageArray;
         node.addEventListener('click', (ev) => {
             if (semSetting.checked) {
                 sem2Classes.push(element);
-               // Array is equal to the parsed version of sem2ClassList (parsed because it is stored as a string)
-               classStorageArray = JSON.parse(localStorage.getItem('sem2ClassList'));
-
-               // Push the selected class into the array
-               classStorageArray.push(element);
-
-               // Store the updated array as a string in the sem2ClassList
-               localStorage.setItem('sem2ClassList', JSON.stringify(classStorageArray));
             } else {
                 sem1Classes.push(element);
-                // Same steps as with sem2, just with sem1ClassList
-                classStorageArray = JSON.parse(localStorage.getItem('sem1ClassList'));
-                classStorageArray.push(element);
-                localStorage.setItem('sem1ClassList', JSON.stringify(classStorageArray));
             }
             updateSemesterClasses();
             setOptions(classes);
@@ -557,19 +542,6 @@ window.onload = () => {
     setTimeout(() => { document.getElementsByTagName("header")[0].classList.add("hide"); }, 300);
     setTimeout(() => { document.getElementById("class-selector").classList.add("hide"); }, 800);
     setOptions(classes);
-    if(!localStorage.getItem('sem1ClassList')){
-        localStorage.setItem('sem1ClassList', '[]');
-    } else {
-        sem2Classes = JSON.parse(localStorage.getItem('sem2ClassList'));
-        updateSemesterClasses();
-    }
-
-    if(!localStorage.getItem('sem2ClassList')){
-        localStorage.setItem('sem2ClassList', '[]');
-    } else {
-        sem1Classes = JSON.parse(localStorage.getItem('sem1ClassList'));
-        updateSemesterClasses();
-    }
 };
 
 function updateSemesterClasses() {
@@ -599,13 +571,9 @@ function updateSemesterClasses() {
         wrapNode.append(document.createElement('hr'), node, document.createElement('hr'));
         sem1ClassDiv.append(wrapNode);
         node.addEventListener('click', (ev) => {
-        sem1Classes.splice(Array.prototype.indexOf.call(sem1ClassDiv.children, node.parentElement), 1);
-        
-        // Removes the class from storage
-        removeClassFromStorage(element, 1);
-        
-        updateSemesterClasses();
-        setOptions(classes);
+            sem1Classes.splice(Array.prototype.indexOf.call(sem1ClassDiv.children, node.parentElement), 1);
+            updateSemesterClasses();
+            setOptions(classes);
         });
     });
 
@@ -633,11 +601,7 @@ function updateSemesterClasses() {
         sem2ClassDiv.append(wrapNode);
         node.addEventListener('click', (ev) => {
             sem2Classes.splice(Array.prototype.indexOf.call(sem2ClassDiv.children, node.parentElement), 1);
-
-        // Removes the class from storage
-        removeClassFromStorage(element, 2);
-        
-        updateSemesterClasses();
+            updateSemesterClasses();
         });
     });
 
@@ -762,11 +726,6 @@ function checkValidity(classList, sem) {
 }
 
 function displaySchedules() {
-    calendarSem1.innerHTML = table;
-    calendarSem2.innerHTML = table;
-}
-
-
     if (sem1Validity.success) {
         let replTable = table;
         schedCount1 = sem1Validity.schedules.length > 0 ? schedCount1 % sem1Validity.schedules.length : 0;
@@ -855,25 +814,3 @@ document.querySelector("#calendarSem2").addEventListener("click", e => {
         document.querySelector(".sem2.header").classList.add("bg-red-200");
     }
 })
-
-
-
-// Removes a class from storage, will be tacked onto click event listeners of currently selected classes
-const removeClassFromStorage = (element, sem) => {
-    let classStorageArray;
-    
-    if(sem === 1){
-        classStorageArray = JSON.parse(localStorage.getItem('sem1ClassList'));
-    } else if (sem === 2) {
-        classStorageArray = JSON.parse(localStorage.getItem('sem2ClassList'));
-    }
-
-    classStorageArray = classStorageArray.filter(course => course.class_code !== element.class_code);
-    console.log(classStorageArray);
-    
-    if(sem === 1){
-        localStorage.setItem('sem1ClassList', JSON.stringify(classStorageArray));
-    } else if (sem === 2) {
-        localStorage.setItem('sem2ClassList', JSON.stringify(classStorageArray));
-    }
-}
