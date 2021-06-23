@@ -144,3 +144,10 @@ header.show {
 .possibilities.active {
 	top: calc(8rem + 1px);
 }
+
+#cal1wrap, #cal2wrap {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	height: fit-content;
+}

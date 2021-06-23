@@ -173,7 +173,8 @@ let classes = [];
 let sem1Classes = [];
 const sem1ClassDiv = document.getElementById('sem1-class-list_');
 let sem2Classes = [];
-let sem1Validity, sem2Validity;
+let sem1Validity = checkValidity(sem1Classes, 1);
+let sem2Validity = checkValidity(sem2Classes, 2);
 const sem2ClassDiv = document.getElementById('sem2-class-list_');
 const scheduleSem1 = document.getElementById('schedule-possibilities1');
 const scheduleSem2 = document.getElementById('schedule-possibilities2');
@@ -189,6 +190,8 @@ const semSetting = document.getElementById("set-semester");
 const searchBar = document.getElementById("class-searchbox");
 const fieldOptions = document.getElementById("field-select");
 const menu = document.getElementById("title-bar");
+
+let schedCount1 = 0, schedCount2 = 0;
 // const url = 'https://uniapp.ncssm.edu/registrar/catalog/course_catalog_beta1.3.1.php';
 
 let sem1ResMeetData, sem2ResMeetData;
@@ -270,6 +273,7 @@ function checkAllMeetingSheetsLoaded() {
 }
 
 function generateClasses() {
+    semSetting.checked = false
     // Unhide the actual content when everything is loaded
     document.getElementById('loading-panel').classList.add('opacity-0');
     setTimeout(() => { document.getElementById('loading-panel').hidden = true; }, 1000);
@@ -334,6 +338,7 @@ function generateClasses() {
     }
     setOptions(classes);
     populateFields(classes);
+    displaySchedules();
 }
 
 // function performFetch() {
@@ -658,19 +663,23 @@ function updateSemesterClasses() {
     }
 
     if (sem1Validity.success) {
+        document.querySelectorAll(".scheduleTag")[0].innerHTML = `Schedule ${schedCount1 + 1}/${sem1Validity.schedules.length}`;
         document.querySelector(".sem1.header").classList.remove("bg-yellow-200", "bg-red-200");
         document.querySelector(".sem1.header").classList.add("bg-green-200");
     }
     else {
+        document.querySelectorAll(".scheduleTag")[0].innerHTML = `Schedule`;
         document.querySelector(".sem1.header").classList.remove("bg-yellow-200", "bg-green-200");
         document.querySelector(".sem1.header").classList.add("bg-red-200");
     }
 
     if (sem2Validity.success) {
+        document.querySelectorAll(".scheduleTag")[1].innerHTML = `Schedule ${schedCount2 + 1}/${sem2Validity.schedules.length}`;
         document.querySelector(".sem2.header").classList.remove("bg-yellow-200", "bg-red-200");
         document.querySelector(".sem2.header").classList.add("bg-green-200");
     }
     else {
+        document.querySelectorAll(".scheduleTag")[1].innerHTML = `Schedule`;
         document.querySelector(".sem2.header").classList.remove("bg-yellow-200", "bg-green-200");
         document.querySelector(".sem2.header").classList.add("bg-red-200");
     }
@@ -756,6 +765,98 @@ function displaySchedules() {
     calendarSem1.innerHTML = table;
     calendarSem2.innerHTML = table;
 }
+
+
+    if (sem1Validity.success) {
+        let replTable = table;
+        schedCount1 = sem1Validity.schedules.length > 0 ? schedCount1 % sem1Validity.schedules.length : 0;
+        Object.keys(schedule).forEach(v => {
+            let idx = sem1Validity.schedules[schedCount1 % sem1Validity.schedules.length][v];
+            idx = idx == NaN ? 0 : idx;
+            if (idx != null) {
+                let code = sem1Classes[idx].class_code;
+                replTable = replTable.replace(`{${v}}`,
+                    (code instanceof Set) ? [...code].join("/") : code)
+            } else {
+                replTable = replTable.replace(`{${v}}`,
+                    "");
+            }
+        });
+        document.querySelector("#cal1wrap").innerHTML = replTable;
+    } else {
+        document.querySelector("#cal1wrap").innerHTML = table;
+    }
+
+    if (sem2Validity.success) {
+        let replTable = table;
+        schedCount2 = sem2Validity.schedules.length > 0 ? schedCount2 % sem2Validity.schedules.length : 0;
+        Object.keys(schedule).forEach(v => {
+            let idx = sem2Validity.schedules[schedCount2 % sem2Validity.schedules.length][v];
+            idx = idx == NaN ? 0 : idx;
+            if (idx != null) {
+                let code = sem2Classes[idx].class_code;
+                replTable = replTable.replace(`{${v}}`,
+                    (code instanceof Set) ? [...code].join("/") : code)
+            } else {
+                replTable = replTable.replace(`{${v}}`,
+                    "")
+            }
+        });
+        document.querySelector("#cal2wrap").innerHTML = replTable;
+    } else {
+        document.querySelector("#cal2wrap").innerHTML = table;
+    }
+}
+
+document.querySelector("#calendarSem1").addEventListener("click", e => {
+    let cal = document.querySelector("#cal1wrap");
+    console.log(e.clientX < cal.offsetLeft + cal.offsetWidth / 2.0, e.clientX, cal.offsetLeft + cal.offsetWidth / 2.0);
+    if (e.clientX < cal.offsetLeft + cal.offsetWidth / 2.0) {
+        schedCount1 = (schedCount1 - 1 < 0) ? schedCount1 - 1 + sem1Validity.schedules.length : schedCount1 - 1;
+    }
+    else {
+        schedCount1 = (schedCount1 + 1) % sem1Validity.schedules.length;
+    }
+
+    displaySchedules();
+
+    if (sem1Validity.success) {
+        document.querySelectorAll(".scheduleTag")[0].innerHTML = `Schedule ${schedCount1 + 1}/${sem1Validity.schedules.length}`;
+        document.querySelector(".sem1.header").classList.remove("bg-yellow-200", "bg-red-200");
+        document.querySelector(".sem1.header").classList.add("bg-green-200");
+    }
+    else {
+        document.querySelectorAll(".scheduleTag")[0].innerHTML = `Schedule`;
+        document.querySelector(".sem1.header").classList.remove("bg-yellow-200", "bg-green-200");
+        document.querySelector(".sem1.header").classList.add("bg-red-200");
+    }
+})
+
+document.querySelector("#calendarSem2").addEventListener("click", e => {
+    let cal = document.querySelector("#cal2wrap");
+    console.log(e.clientX < cal.offsetLeft + cal.offsetWidth / 2.0, e.clientX, cal.offsetLeft + cal.offsetWidth / 2.0);
+    if (e.clientX < cal.offsetLeft + cal.offsetWidth / 2.0) {
+        schedCount2 = (schedCount2 - 1 < 0) ? schedCount2 - 1 + sem2Validity.schedules.length : schedCount2 - 1;
+    }
+    else {
+        schedCount2 = (schedCount2 + 1) % sem2Validity.schedules.length;
+    }
+
+    displaySchedules();
+
+    if (sem2Validity.success) {
+        document.querySelectorAll(".scheduleTag")[1].innerHTML = `Schedule ${schedCount2 + 1}/${sem2Validity.schedules.length}`;
+        document.querySelector(".sem2.header").classList.remove("bg-yellow-200", "bg-red-200");
+        document.querySelector(".sem2.header").classList.add("bg-green-200");
+    }
+    else {
+        document.querySelectorAll(".scheduleTag")[1].innerHTML = `Schedule`;
+        document.querySelector(".sem2.header").classList.remove("bg-yellow-200", "bg-green-200");
+        document.querySelector(".sem2.header").classList.add("bg-red-200");
+    }
+})
+
+
 
 // Removes a class from storage, will be tacked onto click event listeners of currently selected classes
 const removeClassFromStorage = (element, sem) => {
