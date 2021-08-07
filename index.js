@@ -195,8 +195,8 @@ let schedCount1 = 0, schedCount2 = 0;
 // const url = 'https://uniapp.ncssm.edu/registrar/catalog/course_catalog_beta1.3.1.php';
 
 let sem1ResMeetData, sem2ResMeetData;
-const sem1Res = 'https://docs.google.com/spreadsheets/d/1UDDykgtiBTb3f5saTyFb8q3fL1sWuDLgwJEkZJ6ym6o/edit#gid=0';
-const sem2Res = 'https://docs.google.com/spreadsheets/d/1UDDykgtiBTb3f5saTyFb8q3fL1sWuDLgwJEkZJ6ym6o/edit#gid=934085507';
+const sem1Res = 'https://docs.google.com/spreadsheets/d/1CDtJSF643TI8x-IsdVfiz2n_NQuK6aTtnSVszkNOVaU/edit#gid=0';
+const sem2Res = 'https://docs.google.com/spreadsheets/d/1CDtJSF643TI8x-IsdVfiz2n_NQuK6aTtnSVszkNOVaU/edit#gid=934085507';
 
 const schedule = {
     A1: null,
